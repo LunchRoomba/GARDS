@@ -18,10 +18,11 @@ def blur(image, size, iterations):
 
 #Gradient computation from routing slopw
 def gradient(image):
+	var = 5
 	x = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize=3)
 	y = cv2.Sobel(image, cv2.CV_64F, 0, 1, ksize=3)
-	numpy.clip(x, -5, 5, out=x)
-	numpy.clip(y, -5, 5, out=y)
+	numpy.clip(x, -var, var, out=x)
+	numpy.clip(y, -var, var, out=y)
 	return (x, y)
 
 #Routing Slope Generation Using Cone Model

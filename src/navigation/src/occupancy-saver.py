@@ -5,6 +5,7 @@ import scipy.misc
 import time
 import math
 import rospy
+from nav_msgs.msg import OccupancyGrid
 
 EXISTANCE_THRESHOLD = 25
 
@@ -13,4 +14,5 @@ def callback(msg):
 
 def main():
 	rospy.init_node("insertnamehere")
-	sub = rospy.Subscriber("/rtabmap/proj_map", )
+	sub = rospy.Subscriber("/rtabmap/proj_map", OccupancyGrid, callback)
+	rospy.spin()

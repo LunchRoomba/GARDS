@@ -1,0 +1,3 @@
+[submodule "src/light_scan_sim"]
+	path = src/light_scan_sim
+	url = https://github.com/josephduchesne/light_scan_sim.git

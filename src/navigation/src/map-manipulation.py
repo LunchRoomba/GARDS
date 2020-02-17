@@ -73,7 +73,7 @@ def runUpdates(occupancyGrid):
 
 def main():
     rospy.init_node("map-modification")
-    rospy.Subscriber('cloud_map.grid_map', OccupancyGrid, runUpdates)
+    rospy.Subscriber('/rtabmap/proj_map', OccupancyGrid, runUpdates)
     rospy.spin()
 
 if __name__ == '__main__':
